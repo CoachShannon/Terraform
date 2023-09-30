@@ -20,3 +20,13 @@ variable "bucketname" {
   type        = string
   default     = "private-jenkins-bucket-week20project"
 }
+variable "key_pair" {
+  description = "key_pair"
+  type        = string
+  default     = "Luitkeypair"
+}
+variable "vpc_id" {
+  description = "jenkins_vpc_id"
+  type        = string
+  default     = "vpc-0f047e9fcd798f8e9"
+}
