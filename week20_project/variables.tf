@@ -15,26 +15,8 @@ variable "project_instance" {
   default     = "t2.micro"
 }
 
-variable "ami_id" {
-  description = "my_ami_id"
+variable "bucketname" {
+  description = "private jenkins bucket"
   type        = string
-  default     = "t2.micro"
-}
-
-variable "ami_id" {
-  description = "my_ami_id"
-  type        = string
-  default     = "t2.micro"
-}
-
-variable "ami_id" {
-  description = "my_ami_id"
-  type        = string
-  default     = "t2.micro"
-}
-
-variable "ami_id" {
-  description = "my_ami_id"
-  type        = string
-  default     = "t2.micro"
+  default     = "private-jenkins-bucket-week20project"
 }
