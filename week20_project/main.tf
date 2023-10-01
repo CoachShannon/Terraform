@@ -11,6 +11,8 @@ resource "aws_instance" "jenkins" {
   }
   vpc_security_group_ids = [aws_security_group.week_20_sg.id]
 }
+
+
 #create a security group
 resource "aws_security_group" "week_20_sg" {
   name   = "allow_tls and ssh"
@@ -44,3 +46,4 @@ resource "aws_security_group" "week_20_sg" {
     Name = "allow_tls_and_ssh"
   }
 }
+
