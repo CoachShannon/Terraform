@@ -20,28 +20,4 @@ variable "project_instance" {
   default     = "t2.micro"
 }
 
-#define s3
-variable "bucketname" {
-  description = "private jenkins bucket"
-  type        = string
-  default     = "private-jenkins-bucket-week20project"
-}
 
-
-#define the key pair
-variable "key_pair" {
-  description = "key_pair"
-  type        = string
-  default     = "Luitkeypair"
-}
-
-
-#define the VPC id
-variable "vpc_id" {
-  description = "jenkins_vpc_id"
-  type        = string
-  default     = "vpc-0f047e9fcd798f8e9"
-}
-
-
-#---

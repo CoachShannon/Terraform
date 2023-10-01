@@ -21,7 +21,7 @@ resource "aws_vpc" "example" {
 }
 
 
-#create s3 bucket
+
 resource "aws_s3_bucket" "shannonluitbucketredteam" {
   bucket = var.bucketname
 
@@ -29,6 +29,4 @@ resource "aws_s3_bucket" "shannonluitbucketredteam" {
     Name        = "shannonLUITbucket2023"
     Environment = "week_20_project"
   }
-}
 
-#----
