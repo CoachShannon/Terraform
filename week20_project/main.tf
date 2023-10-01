@@ -1,17 +1,22 @@
 #create the ec2 instance
 resource "aws_instance" "jenkins" {
   ami           = var.ami_id
-  instance_type = "t2.micro"
+  instance_type = var.project_instance
   count         = 1
+  key_name      = var.key_pair
+  user_data     = file("jenkins_download.sh")
 
   tags = {
     name = "Jenkins instance"
   }
+  vpc_security_group_ids = [aws_security_group.week_20_sg.id]
 }
+
+
 #create a security group
 resource "aws_security_group" "week_20_sg" {
   name   = "allow_tls and ssh"
-  vpc_id = "vpc-0f047e9fcd798f8e9"
+  vpc_id = var.vpc_id
 
   ingress {
     description = "TLS from VPC"
@@ -42,13 +47,4 @@ resource "aws_security_group" "week_20_sg" {
   }
 }
 
-resource "null_resource" "name" {
 
-  connection {
-    type        = "ssh"
-    user        = "user"
-    private_key = file("C:/Users/breko/OneDrive/Stuff_for_LUIT/Luitkeypair.pem")
-    host        = aws_instance.jenkins.public_ip
-  }
-
-}
