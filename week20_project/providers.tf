@@ -29,4 +29,4 @@ resource "aws_s3_bucket" "shannonluitbucketredteam" {
     Name        = "shannonLUITbucket2023"
     Environment = "week_20_project"
   }
-
+}

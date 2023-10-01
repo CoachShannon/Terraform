@@ -20,4 +20,9 @@ variable "project_instance" {
   default     = "t2.micro"
 }
 
-
+#define bucket name
+variable "private_bucket_name" {
+  description = "shannonLUITbucket2023"
+  type = string
+  default = "bucketname"
+}
