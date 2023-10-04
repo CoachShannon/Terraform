@@ -299,3 +299,8 @@ resource "aws_instance" "web_server" {
     ignore_changes = [security_groups]
   }
 }
+
+
+#terraform taint marks the resource as "tainted" and rebuilds the resource at each apply
+#the new way to achieve the process of replacing a resource at each apply is to use the 
+#terraform -replace="whatever the name of your resource is" 
