@@ -142,3 +142,7 @@ resource "aws_instance" "web_server" {                            # BLOCK
     Name = "Web EC2 Server"
   }
 }
+
+resource "aws_instance" "aws_linux" {
+  
+}
